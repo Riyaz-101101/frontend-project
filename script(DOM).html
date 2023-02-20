@@ -1,0 +1,183 @@
+<html>
+    <head> 
+        <title> Building Blocks </title>
+    </head>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+        }
+        .main-container {
+            display: inline-block;
+            border: 1px solid silver;
+            padding: 20px;
+        }
+        input[type=text]#name{
+            border:none;
+            border-bottom:1px dashed grey;
+        }
+        
+        label#title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        select#color {
+            padding: 3px;
+            border: 1px solid silver;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        .build-tools {
+            max-width: 800px;
+        }
+        td {
+            padding: 10px;
+            font-size: 13px;
+        }
+        p {
+            display: inline-block;
+            margin: 0px;
+            padding: 5px 0px;
+        }
+        .brick-button-pane {
+            text-align: center;
+            margin-top: 10px;
+        }
+        button#build_btn {
+            border: none;
+            background-color: darkcyan;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .mt30{
+            margin-top: 30px;
+        }
+        .brick {
+            min-width: 100px;
+            background-color: black;
+            display: inline-block;
+            margin: 3px;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border-radius: 3px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .brick[type="cement"]{
+
+        }
+        .brick[type="fire"]{
+            
+        }
+        .table{
+			display: table;
+			padding: 10px;
+			margin-top: 20px;
+		}
+		.table-row{
+			display: table-row;
+		}
+		.table-cell{
+			display: table-cell;
+			padding: 10px;
+			
+		}
+       
+    </style>
+    <body>
+        <div class="main-container">
+            <h3> Personal Information </h3>
+			<div class="table">
+				<div class="table-row">
+                    <label for="name"> Name</label>
+                    <input id="name" type="text"  required>
+                    <label for="college">College</label>
+                    <input id="name"type="text" required>
+                    <label for="department">Department</label>
+                    <input id="name" type="text" required>
+                    <label for="email">Email</label>
+                    <input id="name" type="text" required>
+                    <label for="phone">Phone</label>
+                    <input id="name"type="text" required>
+				</div>
+			</div>
+            <div class="build-tools">
+                <h3 > Materials </h3>
+                <table>
+                    <tr class="bricks-color">
+                        <td> Color </td>
+                        <td>
+                            <select id="color">
+                                <option value="red"  > Red </option>
+                        
+                                <option value="blue"  >Blue</option>
+                           
+                        
+                                <option value="green">Green</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="bricks-section">
+                        <td>
+                            Favorite brick
+                        </td>
+                        <td>
+                            <input type="radio" id="cement_brick" name="brick_type" value="Cement"onclick=cementremove()>
+                            <label for="cement_brick">Cement Bricks</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="fire_brick" name="brick_type" value="Fire" onclick="fireremove()" >
+                            <label for="fire_brick"> Fire Bricks</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="metal_brick" name="brick_type" value="Metal" onclick="metalremove()">
+                            <label for="metal_brick">Metal Bricks</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="brick-button-pane">
+                                <button id="build_btn" onclick="buildHome()"> Build </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="house-layout mt30" >
+                <label id="title"> Layout </label>
+                <div id="layout">
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function buildHome(){
+            var color = document.getElementById("color").value;
+            var brickType = document.querySelector('input[name="brick_type"]:checked').value;
+            let brick = document.createElement("div");
+            brick.style.backgroundColor = color;
+            brick.className = "brick"
+            brick.innerText = brickType;
+            brick.setAttribute("type", brickType);
+            document.getElementById("layout").appendChild(brick);
+        }
+        function cementremove(){
+            var bricktype= document.queryselector('input[value="cement"]:checked');
+            let brick=document.removeElement("td");
+            brick.className="brick"
+            brick.setAttribute("type",bricktype);
+            document.getElementById("layout").removeChild(brick);
+        }
+        
+        
+        
+    </script>
+
+</html>

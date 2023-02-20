@@ -1,0 +1,708 @@
+
+<html>
+<head>
+	<title> page in light theme</title>
+
+<style>
+	body {
+		padding: 25px;
+		background-color: white;
+		color:black;
+		font-size: 25px;
+
+	}
+	nav {
+		display:inline-flex;
+	    align-items:center;
+	    justify-content: space-between;
+	}
+	.tab {
+		position: absolute;
+	    left:50%;
+	    top:10%;
+	    width: 100%;
+	    max-width: 90%;
+	    transform: translate(-50%,-50%);
+	    text-align:center;
+	    color:#fff;
+	}
+	.tab li {
+   	display: inline-block;
+	margin-top:10px; 
+	margin-bottom:30px;
+	margin-right:20px; 
+	margin-left:15px; 
+    }
+   .tab li a
+    {
+ 	text-decoration:none;
+ 	color:rgb(17,184,47);
+	padding: 5px 0;
+	position: relative;
+    }
+   .tab li a::after
+   {
+   	content:"";
+	background:#ffff;
+	width:100%;
+	height:5px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	transition:width 0.5s;
+}
+    .tab li a:hover::after
+{
+	width:100%;
+ 	border-radius: 5px;
+ 	background-color: yellow;
+}
+  .discover h2{
+  	margin-top:100px;
+  	width: 50%;
+  	text-decoration-color:none;
+  	font-family: cursive;
+  	color:rgb(28,18,204);
+
+  }
+  .discover button
+{
+	padding:15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color:rgb(16,189,232);
+	background-color: rgb(232,41,16);
+	border:none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+
+}
+.discover button a
+{
+	display: inline-block;
+	text-decoration:none;
+	text-align: center;
+	color:rgb(196,16,232);
+	padding: 5px 10px;
+	position: relative;
+}
+
+.discover button:hover
+{
+	transform: scaleX(1.01);
+	transform-origin: left;
+	background-color:rgb(78,138,78);
+}
+.grid1
+{
+	display: grid;
+	margin-top: 100px;
+	grid-row-gap: 200px;
+	grid-column-gap: 100px;
+	max-width: auto;
+	grid-template-columns: auto  auto  auto;
+	padding:20px;
+}
+.Responsive
+{
+	background-color:rgb(40,176,50);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 9px 9px #999;
+
+}
+.Responsive:hover
+{
+	transform: scaleX(1.1);
+	transform-origin: left;
+	box-shadow: 9px 9px rgb(84,222,16);
+	background-color:rgb(99,245,15);
+}
+.Responsive a
+{
+	display: inline-block;
+	text-decoration:none;
+	text-align: center;
+	color:rgb(196,16,232);
+	padding: 5px 5px;
+	position: relative;
+}
+.Responsive img{
+	height: 100px;
+	width:100px;
+	border-radius: 50%;
+}
+.UX
+{
+	background-color:rgb(199,196,18);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	padding-top: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 9px 9px #999;
+}
+.UX:hover
+{
+	transform: scaleX(1.1);
+	transform-origin: left;
+	box-shadow: 9px 9px 9px 9px rgb(186,177,9);
+	background-color:rgb(240,217,17);
+}
+.UX a
+{
+	display: inline-block;
+	text-decoration:none;
+	text-align: center;
+	color:rgb(196,16,232);
+	padding: 5px 5px;
+	position: relative;
+}
+.UX img{
+	height: 100px;
+	width:100px;
+	border-radius: 50%;
+}
+.seo
+{
+	background-color:rgb(35,194,183);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 9px 9px #999;
+}
+
+.seo:hover
+{
+	transform: scaleX(1.1);
+	transform-origin: left;
+	box-shadow: 9px 9px 9px 9px rgb(14,227,235);
+	background-color:rgb(35,216,222);
+}
+.seo a
+{
+	display: inline-block;
+	text-decoration:none;
+	text-align: center;
+	color:rgb(196,16,232);
+	padding: 5px 5px;
+	position: relative;
+}
+.seo img{
+	height: 100px;
+	width:100px;
+	border-radius: 50%;
+}
+
+#Work h2
+{
+	font-size: 50px;
+	color:rgb(227,11,11);
+	animation: glow 1s ease-in-out infinite alternate;
+} 
+@keyframes glow {
+	from {
+		text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
+	}
+	to {
+		text-shadow: 0 0 20px rgb(241,66,35), 0 0 30px rgb(243,60,28), 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+	}
+}
+#Work h3{
+	font-family: sans-serif;
+	font-size: 30px;
+  	margin-top:50px;
+  	width: 80%;
+  	text-decoration-color:none;
+  	color:rgb(28,18,204);
+}
+.grid2
+{
+	display: grid;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	grid-column-gap: 20px;
+	max-width: auto;
+	grid-template-columns: auto  auto  auto  auto  auto;
+	padding:20px;
+}
+.Ideas
+{
+	background-color:rgb(240,152,26);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	border-radius:20px;
+	box-shadow: 9px 9px #999;
+	text-align: center;
+}
+.Ideas {
+	position:relative;
+	width: 200px;
+	height:200px;
+	overflow: hidden;
+}
+.Ideas p{
+	font-weight: bold;
+	font-size: 25px;
+	color:rgb(255,3,40);
+}
+.Ideas p:hover{
+	font-size: 30px;
+	transform: translateZ(-20px);
+	color:rgb(41,224,20);
+}
+.Ideas:hover{
+	transform: translateY(-20px);
+	box-shadow: 10px 10px rgb(240,152,26);
+
+}
+.Ideas h5:hover{
+	color:rgb(20,207,224);
+}
+.Sketch
+{
+	background-color:rgb(240,152,26);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow:  9px 9px #999;
+	position:relative;
+	width: 200px;
+	height:200px;
+	overflow: hidden;
+}
+.Sketch:hover{
+	transform: translateY(-20px);
+	box-shadow: 10px 10px rgb(240,152,26);
+	
+}
+.Sketch p{
+	font-weight: bold;
+	font-size: 25px;
+	color:rgb(255,3,40);
+}
+.Sketch p:hover{
+	font-size: 30px;
+	transform: translateZ(-20px);
+	color:rgb(41,224,20);
+}
+.Sketch h5:hover{
+	color:rgb(20,207,224);
+}
+.design
+{
+	background-color:rgb(240,152,26);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow:  9px 9px #999;
+	position:relative;
+	width: 200px;
+	height:200px;
+	overflow: hidden;
+}
+.design:hover{
+	transform: translateY(-20px);
+	box-shadow: 10px 10px rgb(240,152,26);
+	
+}
+.design p{
+	font-weight: bold;
+	font-size: 25px;
+	color:rgb(255,3,40);
+}
+.design p:hover{
+	font-size: 30px;
+	transform: translateZ(-20px);
+	color:rgb(41,224,20);
+}
+.design h5:hover{
+	color:rgb(20,207,224);
+}
+.Creation
+{
+	background-color:rgb(240,152,26);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow:  9px 9px #999;
+	position:relative;
+	width: 200px;
+	height:200px;
+	overflow: hidden;
+}
+.Creation:hover{
+	transform: translateY(-20px);
+	box-shadow: 10px 10px rgb(240,152,26)
+	
+}
+.Creation p{
+	font-weight: bold;
+	font-size: 25px;
+	color:rgb(255,3,40);
+}
+.Creation p:hover{
+	font-size: 30px;
+	transform: translateZ(-20px);
+	color:rgb(41,224,20);
+}
+.Creation h5:hover{
+	color:rgb(20,207,224);
+}
+.Launch
+{
+	background-color:rgb(240,152,26);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow:  9px 9px #999;
+	position:relative;
+	width: 200px;
+	height:200px;
+	overflow: hidden;
+}
+.Launch:hover{
+	transform: translateY(-20px);
+	box-shadow: 10px 10px rgb(240,152,26);
+	
+}
+.Launch h5:hover{
+	color:rgb(20,207,224);
+}
+.Launch p{
+	font-weight: bold;
+	font-size: 25px;
+	color:rgb(255,3,40);
+}
+.Launch p:hover{
+	font-size: 30px;
+	transform: translateZ(-20px);
+	color:rgb(41,224,20);
+}
+.Say h2
+{
+	font-size: 50px;
+	color:rgb(227,11,11);
+	animation: glow1 1s ease-in-out infinite alternate;
+} 
+@keyframes glow1 {
+	from {
+		text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+	}
+	to {
+		text-shadow: 0 0 20px rgb(241,66,35), 0 0 30px rgb(243,60,28), 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+	}
+}
+.Say h3{
+	font-family: cursive;
+	font-size: 30px;
+  	margin-top:50px;
+  	width: 75%;
+  	text-decoration-color:none;
+  	color:rgb(28,18,204);
+}
+
+.grid3
+{
+	display: grid;
+	margin-top: 70px;
+	grid-row-gap: 200px;
+	grid-column-gap: 100px;
+	grid-template-columns: auto  auto  auto;
+	padding:20px;
+}
+.professional1
+{
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 30px;
+	font-size: 30px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 10px 10px #999;
+}
+.professional1 {
+	position: relative;
+	width:300px;
+	height: 420px;
+	background-color: rgb(141,19,235);
+	transition:0.3s;
+	overflow:hidden;
+}
+.professional1:hover{
+	transform: translateY(-20px);
+}
+.professional1::after{
+	content:" ";
+	position: absolute;
+	top:20px;
+	right:20px;
+	width:700px;
+	height:50px;
+	transform: rotate(-40deg) translateY(-100px);
+	background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+.professional1:hover:after {
+	animation: border-effect 1.2s ease;
+}
+@keyframes border-effect {
+	0%{
+		transform: rotate(-40deg) translateY(-100px);
+	}
+	100% {
+		transform: rotate(-40deg) translateY(530px);
+	}
+}
+.professional1 p {
+	font-family: sans-serif;
+	font-size: 25px;
+	text-align: justify;
+}
+.professional1 h5{
+	font-family: 'poppins',sans-serif;
+	color: #fff;
+	padding: 5px 20px;
+	border:1px solid #fff;
+	text-decoration: none; 
+}
+.professional2
+{
+	background-color:rgba(255,255,255,0.8);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 30px;
+	font-size: 25px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 9px 9px #999;
+}
+.professional2 {
+	position: relative;
+	width:300px;
+	height: 420px;
+	background-color: rgb(141,19,235);
+	transition: 0.3s;
+	overflow:hidden;
+}
+.professional2:hover{
+	transform: translateY(-20px);
+}
+.professional2::after{
+	content:" ";
+	position: absolute;
+	top:0;
+	right:0;
+	width:700px;
+	height:50px;
+	transform: rotate(-40deg) translateY(-100px);
+	background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+.professional2:hover:after {
+	animation: effect 1.2s ease;
+}
+@keyframes effect {
+	0%{
+		transform: rotate(-40deg) translateY(-100px);
+	}
+	100% {
+		transform: rotate(-40deg) translateY(530px);
+	}
+}
+.professional2 p {
+	font-family: sans-serif;
+	font-size: 25px;
+	text-align: center;
+}
+.professional2 h5{
+	font-family: 'poppins',sans-serif;
+	color: #fff;
+	padding: 5px 20px;
+	border:1px solid #fff;
+	text-decoration: none; 
+}
+.professional3
+{
+	background-color:rgba(255,255,255,0.8);
+	border:3px solid rgba(0,0,0,0.8);
+	padding: 30px;
+	font-size: 30px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 10px 10px #999;
+}
+.professional3 {
+	position: relative;
+	width:300px;
+	height: 420px;
+	background-color: rgb(141,19,235);
+	transition: .3s;
+	overflow:hidden;
+}
+.professional3:hover{
+	transform: translateY(-20px);
+}
+.professional3::after{
+	content:" ";
+	position: absolute;
+	top:0;
+	right:0;
+	width:700px;
+	height:50px;
+	transform: rotate(-40deg) translateY(-100px);
+	background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+.professional3:hover:after {
+	animation: effect 1.2s ease;
+}
+@keyframes effect {
+	0%{
+		transform: rotate(-40deg) translateY(-100px);
+	}
+	100% {
+		transform: rotate(-40deg) translateY(530px);
+	}
+}
+.professional3 p {
+	font-family: sans-serif;
+	font-size: 25px;
+	text-align: center;
+}
+.professional3 h5{
+	font-family: 'poppins',sans-serif;
+	color: #fff;
+	padding: 5px 20px;
+	border:1px solid #fff;
+	text-decoration: none; 
+}
+</style>
+</head>
+<body>
+	<div class="tab">
+	   <nav>
+	   <ul>
+		  <li><a href="">Home</a> </li>
+		  <li><a href="">About</a> </li>
+		  <li><a href="#Work">Work Process</a> </li>
+		  <li><a href="">Testimonals</a> </li>
+		  <li><a href="">Pricing Tables</a> </li>
+		  <li><a href="">Blog Entries</a> </li>
+		  <li><a href="">Contact Us</a> </li>
+					
+		</ul>
+
+	   </nav>		
+	</div>
+	<div class="discover">
+		<center>
+		<h2>
+		Front End developer architents and develops websites and application using web technologices</h2>
+		<button><a href=""> DISCOVER MORE</a></button></center>
+	</div>
+    <div class="grid1">
+		<div class="Responsive">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Responsive_Web_Design_Logo.svg">
+			<p><a href="">Responsive</a></p>
+			<p><center> Responsive design is an approach to web page creation that makes use of flexible layouts</center></p>
+		</div>
+		<div class="UX">
+			<img src="https://www.techprevue.com/wp-content/uploads/2016/07/mobile-app-ux-ui-basics.jpg">
+			<p><a href="">Better UI/UX</a></p>
+			<p><center>Create user-friendly interface that enable users to understand how to use complex technical products</center></p>
+		</div>
+		<div class="seo">
+			<img src="https://thumbs.dreamstime.com/b/seo-colorful-flat-logo-icon-gear-multi-colored-131926316.jpg">
+			<p><a href="">SEO</a></p>
+			<p><center>Search Engine Optimization and is the process used to optimize a websites technical configuration/ content relevance and link popularity so its pages can become easily finable</center></p>
+		</div>
+	</div>
+	<div id="Work">
+		<center>
+			<h2> Work Process</h2>
+			<h3>When divided into 5 steps the design process ranges from identifying the problem that are design or product will sove,all the way to research,planning,prototyping and more</h3>
+		</center>
+	</div>
+	<div class="grid2">
+		<div class="Ideas">
+			<center>
+			<p> Get Ideas</p><br>
+			<h5>You'll figure out the market share.</h5>
+			</center>
+		</div>
+		<div class="Sketch">
+			<center>
+			<p>Sketch Up</p><br>
+			<h5>Sketch Up using tools like figma.</h5>
+			</center>
+		</div>
+		<div class="design">
+			<center>
+			<p> Design</p><br>
+			<h5>Construct HTML,CSS,script.</h5>
+			</center>
+		</div>
+		<div class="Creation">
+			<center>
+			<p>Content Creation</p><br>
+			<h5>Get the professional content.</h5>
+			</center>
+		</div>
+		<div class="Launch">
+			<center>
+			<p>Launch</p><br>
+			<h5>Host in a Website to access.</h5>
+			</center>
+		</div>
+	</div>
+	<div class="Say">
+		<center>
+			<h2>What do the say?</h2>
+			<h3>Donec tempus,sem non rutrum imperdiet.Lectus orci fringilla nulla at accumsan elit eros a turpis.Ut sagittis tectus libero
+			</h3>
+		</center>
+	</div>
+	<div class="grid3">
+		<div class="professional1">
+			<center>
+			<p>Responsive design is an approach to web page creation that makes use of flexible layouts</p><br><br>
+			</center>
+			<h5>Get the professional content</h5>
+		</div>
+		<div class="professional2">
+			<center>
+			<p>Create user-friendly interface that enable users to understand how to use complex techical products</p><br><br><br>
+			</center>
+			<h5>Get the professional content</h5>
+		</div>
+		<div class="professional3">
+			<center>
+			<p>Search engine optimiztion and is the process uded to optimize a websites technical configuration/content relevance and link popularity so its pages can become easily finable</p>
+			</center>
+			<h5>Get the professional content</h5>
+		</div>
+	</div>
+</body>
+</html>
